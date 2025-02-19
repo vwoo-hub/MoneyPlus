@@ -4,8 +4,10 @@ import XCTest
 
 public class InvalidAmountErrorDialogPage: BasePage {
     
-    override var rootElement: XCUIElement {
-        return app.staticTexts["Oops"]
+    override var initialViews: [XCUIElement] {
+        return [
+            app.staticTexts["Oops"]
+        ]
     }
 
     @discardableResult

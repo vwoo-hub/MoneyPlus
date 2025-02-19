@@ -1,14 +1,12 @@
-
 import Foundation
 import XCTest
 
-class MoneyPlusTest: BaseTest {
+class ErrorValidationTest: BaseTest {
     
     lazy var homePage = HomePage(app: app)
     lazy var newPaymentPage = NewPaymentPage(app: app)
     lazy var invalidAmountErrorDialogPage = InvalidAmountErrorDialogPage(app: app)
     lazy var invalidTitleErrorDialogPage = InvalidTitleErrorDialogPage(app: app)
-    
     
     func test_whenInvalidTitle_thenDisplayErrorMessage() {
         homePage
