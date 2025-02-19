@@ -1,11 +1,3 @@
-//
-//  NewPaymentPage.swift
-//  MoneyPlusUITests
-//
-//  Created by Vincent Woo on 2/18/25.
-//  Copyright © 2025 Seeking. All rights reserved.
-//
-
 import Foundation
 import XCTest
 
@@ -18,8 +10,13 @@ public class NewPaymentPage: BasePage {
         static let saveButton = "save_button"
     }
 
-    override var rootElement: XCUIElement {
-        return app.staticTexts[Constants.newPaymentLabel]
+    override var initialViews: [XCUIElement] {
+        return [
+            app.staticTexts[Constants.newPaymentLabel],
+            app.textFields[Constants.titleTextField],
+            app.textFields[Constants.amountTextField],
+            app.buttons[Constants.saveButton]
+        ]
     }
 
     @discardableResult

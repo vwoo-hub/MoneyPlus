@@ -4,9 +4,18 @@ import XCTest
 
 public class InvalidTitleErrorDialogPage: BasePage {
     
-
-    override var rootElement: XCUIElement {
-        return app.staticTexts["Oops"]
+    private struct Constants {
+        static let titelLabel = "Oops"
+        static let subtitleLabel = "Please enter a title~"
+        static let okButton = "OK"
+    }
+    
+    override var initialViews: [XCUIElement] {
+        return [
+            app.staticTexts[Constants.titelLabel],
+            app.staticTexts[Constants.subtitleLabel],
+            app.buttons[Constants.okButton]
+        ]
     }
 
     @discardableResult

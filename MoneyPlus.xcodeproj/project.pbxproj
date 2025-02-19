@@ -21,7 +21,7 @@
 		9CB4ED7A246C26F00098975A /* NewPaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4ED79246C26F00098975A /* NewPaymentController.swift */; };
 		E81D649A2D647F250029025F /* MoneyPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64992D647F250029025F /* MoneyPlusUITests.swift */; };
 		E81D649C2D647F250029025F /* MoneyPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D649B2D647F250029025F /* MoneyPlusUITestsLaunchTests.swift */; };
-		E81D64A52D647FD00029025F /* MoneyPlusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A42D647FD00029025F /* MoneyPlusTest.swift */; };
+		E81D64A52D647FD00029025F /* ErrorValidationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A42D647FD00029025F /* ErrorValidationTest.swift */; };
 		E81D64A72D6480010029025F /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A62D6480010029025F /* BaseTest.swift */; };
 		E81D64A92D6480CF0029025F /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A82D6480CF0029025F /* HomePage.swift */; };
 		E81D64AD2D64810E0029025F /* NewPaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64AC2D64810E0029025F /* NewPaymentPage.swift */; };
@@ -58,7 +58,7 @@
 		E81D64972D647F250029025F /* MoneyPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81D64992D647F250029025F /* MoneyPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPlusUITests.swift; sourceTree = "<group>"; };
 		E81D649B2D647F250029025F /* MoneyPlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E81D64A42D647FD00029025F /* MoneyPlusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPlusTest.swift; sourceTree = "<group>"; };
+		E81D64A42D647FD00029025F /* ErrorValidationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorValidationTest.swift; sourceTree = "<group>"; };
 		E81D64A62D6480010029025F /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		E81D64A82D6480CF0029025F /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		E81D64AC2D64810E0029025F /* NewPaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPaymentPage.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		E81D64A32D647F370029025F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E81D64A42D647FD00029025F /* MoneyPlusTest.swift */,
+				E81D64A42D647FD00029025F /* ErrorValidationTest.swift */,
 				E81D64A62D6480010029025F /* BaseTest.swift */,
 			);
 			path = Tests;
@@ -326,7 +326,7 @@
 				E81D64A72D6480010029025F /* BaseTest.swift in Sources */,
 				E81D64B12D655A8D0029025F /* InvalidAmountErrorDialogPage.swift in Sources */,
 				E81D64AD2D64810E0029025F /* NewPaymentPage.swift in Sources */,
-				E81D64A52D647FD00029025F /* MoneyPlusTest.swift in Sources */,
+				E81D64A52D647FD00029025F /* ErrorValidationTest.swift in Sources */,
 				E81D649A2D647F250029025F /* MoneyPlusUITests.swift in Sources */,
 				E81D649C2D647F250029025F /* MoneyPlusUITestsLaunchTests.swift in Sources */,
 			);
