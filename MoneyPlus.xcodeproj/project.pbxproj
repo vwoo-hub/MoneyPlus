@@ -24,10 +24,13 @@
 		E81D64A52D647FD00029025F /* ErrorValidationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A42D647FD00029025F /* ErrorValidationTest.swift */; };
 		E81D64A72D6480010029025F /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A62D6480010029025F /* BaseTest.swift */; };
 		E81D64A92D6480CF0029025F /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64A82D6480CF0029025F /* HomePage.swift */; };
-		E81D64AD2D64810E0029025F /* NewPaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64AC2D64810E0029025F /* NewPaymentPage.swift */; };
+		E81D64AD2D64810E0029025F /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64AC2D64810E0029025F /* PaymentPage.swift */; };
 		E81D64AF2D6482A10029025F /* BasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64AE2D6482A10029025F /* BasePage.swift */; };
 		E81D64B12D655A8D0029025F /* InvalidAmountErrorDialogPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64B02D655A8D0029025F /* InvalidAmountErrorDialogPage.swift */; };
 		E81D64B32D6565B30029025F /* InvalidTitleErrorDialogPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64B22D6565B30029025F /* InvalidTitleErrorDialogPage.swift */; };
+		E81D64B52D65B2600029025F /* PaymentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64B42D65B2600029025F /* PaymentTest.swift */; };
+		E81D64B82D65B6C50029025F /* XCUIElementExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64B72D65B6C50029025F /* XCUIElementExtensions.swift */; };
+		E81D64BB2D65BB840029025F /* InvalidDateErrorDialogPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D64BA2D65BB840029025F /* InvalidDateErrorDialogPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +64,13 @@
 		E81D64A42D647FD00029025F /* ErrorValidationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorValidationTest.swift; sourceTree = "<group>"; };
 		E81D64A62D6480010029025F /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		E81D64A82D6480CF0029025F /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
-		E81D64AC2D64810E0029025F /* NewPaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPaymentPage.swift; sourceTree = "<group>"; };
+		E81D64AC2D64810E0029025F /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
 		E81D64AE2D6482A10029025F /* BasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePage.swift; sourceTree = "<group>"; };
 		E81D64B02D655A8D0029025F /* InvalidAmountErrorDialogPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidAmountErrorDialogPage.swift; sourceTree = "<group>"; };
 		E81D64B22D6565B30029025F /* InvalidTitleErrorDialogPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidTitleErrorDialogPage.swift; sourceTree = "<group>"; };
+		E81D64B42D65B2600029025F /* PaymentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTest.swift; sourceTree = "<group>"; };
+		E81D64B72D65B6C50029025F /* XCUIElementExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtensions.swift; sourceTree = "<group>"; };
+		E81D64BA2D65BB840029025F /* InvalidDateErrorDialogPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidDateErrorDialogPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,7 @@
 		E81D64982D647F250029025F /* MoneyPlusUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E81D64B62D65B6AF0029025F /* Utils */,
 				E81D64A32D647F370029025F /* Tests */,
 				E81D64A22D647F310029025F /* Pages */,
 				E81D649B2D647F250029025F /* MoneyPlusUITestsLaunchTests.swift */,
@@ -185,11 +192,10 @@
 		E81D64A22D647F310029025F /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				E81D64B92D65BB670029025F /* ErrorDialogs */,
 				E81D64A82D6480CF0029025F /* HomePage.swift */,
-				E81D64AC2D64810E0029025F /* NewPaymentPage.swift */,
+				E81D64AC2D64810E0029025F /* PaymentPage.swift */,
 				E81D64AE2D6482A10029025F /* BasePage.swift */,
-				E81D64B02D655A8D0029025F /* InvalidAmountErrorDialogPage.swift */,
-				E81D64B22D6565B30029025F /* InvalidTitleErrorDialogPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -199,8 +205,27 @@
 			children = (
 				E81D64A42D647FD00029025F /* ErrorValidationTest.swift */,
 				E81D64A62D6480010029025F /* BaseTest.swift */,
+				E81D64B42D65B2600029025F /* PaymentTest.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		E81D64B62D65B6AF0029025F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E81D64B72D65B6C50029025F /* XCUIElementExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E81D64B92D65BB670029025F /* ErrorDialogs */ = {
+			isa = PBXGroup;
+			children = (
+				E81D64B22D6565B30029025F /* InvalidTitleErrorDialogPage.swift */,
+				E81D64B02D655A8D0029025F /* InvalidAmountErrorDialogPage.swift */,
+				E81D64BA2D65BB840029025F /* InvalidDateErrorDialogPage.swift */,
+			);
+			path = ErrorDialogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,13 +346,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81D64B32D6565B30029025F /* InvalidTitleErrorDialogPage.swift in Sources */,
+				E81D64B82D65B6C50029025F /* XCUIElementExtensions.swift in Sources */,
 				E81D64A92D6480CF0029025F /* HomePage.swift in Sources */,
 				E81D64AF2D6482A10029025F /* BasePage.swift in Sources */,
 				E81D64A72D6480010029025F /* BaseTest.swift in Sources */,
 				E81D64B12D655A8D0029025F /* InvalidAmountErrorDialogPage.swift in Sources */,
-				E81D64AD2D64810E0029025F /* NewPaymentPage.swift in Sources */,
+				E81D64AD2D64810E0029025F /* PaymentPage.swift in Sources */,
+				E81D64B52D65B2600029025F /* PaymentTest.swift in Sources */,
 				E81D64A52D647FD00029025F /* ErrorValidationTest.swift in Sources */,
 				E81D649A2D647F250029025F /* MoneyPlusUITests.swift in Sources */,
+				E81D64BB2D65BB840029025F /* InvalidDateErrorDialogPage.swift in Sources */,
 				E81D649C2D647F250029025F /* MoneyPlusUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

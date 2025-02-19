@@ -1,12 +1,20 @@
-
 import Foundation
 import XCTest
 
+
 public class InvalidAmountErrorDialogPage: BasePage {
+    
+    private struct Constants {
+        static let titelLabel = "Oops"
+        static let subtitleLabel = "Please enter a valid amount~"
+        static let okButton = "OK"
+    }
     
     override var initialViews: [XCUIElement] {
         return [
-            app.staticTexts["Oops"]
+            app.staticTexts[Constants.titelLabel],
+            app.staticTexts[Constants.subtitleLabel],
+            app.buttons[Constants.okButton]
         ]
     }
 
@@ -17,3 +25,4 @@ public class InvalidAmountErrorDialogPage: BasePage {
         return self
     }
 }
+

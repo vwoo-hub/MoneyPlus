@@ -15,6 +15,12 @@ public class HomePage: BasePage {
         static let recentTransactionsLabel = "Recent Transactions"
     }
     
+    private enum Activity {
+        static let activityLabel = "activity_label"
+        static let activityDateLabel = "activity_date_label"
+        static let activityCostLabel = "activity_cost_label"
+    }
+    
     override var initialViews: [XCUIElement] {
         return [
             app.staticTexts[Constants.titelLabel],
@@ -29,6 +35,18 @@ public class HomePage: BasePage {
     func tapAddButton(completion: Completion = nil) -> Self {
         log("tap Add button")
         app.buttons["add_button"].tap()
+        return self
+    }
+    
+    @discardableResult
+    func viewActivityLabels(completion: Completion = nil,  _ title: String, _ date: String, _ cost: String) -> Self {
+//        XCTAssertEqual(app.staticTexts[Activity.activityLabel].label, title)
+//        XCTAssertEqual(app.staticTexts[Activity.activityDateLabel].label, date)
+//        XCTAssertEqual(app.staticTexts[Activity.activityCostLabel].label, cost)
+
+        XCTAssertTrue(app.staticTexts[title].exists)
+        XCTAssertTrue(app.staticTexts[date].exists)
+        XCTAssertTrue(app.staticTexts[cost].exists)
         return self
     }
 }
