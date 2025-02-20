@@ -12,6 +12,7 @@ class PaymentTest: BaseTest {
         let date = "15/01/2025"
         
         homePage
+            .deleteAllActivityCells()
             .tapAddButton()
         
         paymentPage

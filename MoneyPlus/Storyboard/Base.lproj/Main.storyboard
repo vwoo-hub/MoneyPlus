@@ -208,6 +208,9 @@
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sln-w3-Bw4">
                                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                    <accessibility key="accessibilityConfiguration" identifier="image_view">
+                                                                        <bool key="isElement" value="YES"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="E3s-IK-WMd"/>
                                                                         <constraint firstAttribute="height" constant="40" id="zey-nb-2BL"/>
