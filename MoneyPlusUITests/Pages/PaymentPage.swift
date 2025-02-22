@@ -10,6 +10,8 @@ public class PaymentPage: BasePage {
         static let dateTextField = "date_field"
         static let incomeButton = "INCOME"
         static let expenseButton = "EXPENSE"
+        static let locationTextField = "location_field"
+        static let detailTextField = "detail_field"
         static let saveButton = "save_button"
     }
 
@@ -20,6 +22,8 @@ public class PaymentPage: BasePage {
             app.textFields[Constants.amountTextField],
             app.buttons[Constants.incomeButton],
             app.buttons[Constants.expenseButton],
+            app.textFields[Constants.locationTextField],
+            app.textFields[Constants.detailTextField],
             app.buttons[Constants.saveButton]
         ]
     }
@@ -56,6 +60,22 @@ public class PaymentPage: BasePage {
     func tapExpenseButton(completion: Completion = nil) -> Self {
         log("tap expense button")
         app.buttons[Constants.expenseButton].tap()
+        return self
+    }
+    
+    @discardableResult
+    func typeLocationTextField(completion: Completion = nil, _ location: String) -> Self {
+        log("type location textfield")
+        app.textFields[Constants.locationTextField].tap()
+        app.textFields[Constants.locationTextField].typeText(location)
+        return self
+    }
+    
+    @discardableResult
+    func typeDetailTextField(completion: Completion = nil, _ detail: String) -> Self {
+        log("type detail textfield")
+        app.textFields[Constants.detailTextField].tap()
+        app.textFields[Constants.detailTextField].typeText(detail)
         return self
     }
     

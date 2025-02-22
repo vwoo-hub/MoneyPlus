@@ -1,7 +1,8 @@
 import Foundation
 import XCTest
 
-class TransactionDetailsPage: BasePage {
+public class TransactionDetailsPage: BasePage {
+    
     private struct Constants {
         static let activityDetailsTitleLabel = "activity_details_title_label"
         static let activityDetailsDateLabel = "activity_details_date_label"
@@ -18,5 +19,17 @@ class TransactionDetailsPage: BasePage {
             app.staticTexts[Constants.activityDetailsCostLabel],
             app.staticTexts[Constants.activityDetailsDetailLabel]
         ]
+    }
+    
+    @discardableResult
+    func viewTransactionDetailLabels(completion: Completion = nil, _ title: String, _ date: String, _ cost: String, _ location: String, _ detail: String) -> Self {
+        log("verify transaction details")
+        XCTAssertEqual(app.staticTexts[Constants.activityDetailsTitleLabel].label, title)
+        XCTAssertEqual(app.staticTexts[Constants.activityDetailsDateLabel].label, date)
+        XCTAssertEqual(app.staticTexts[Constants.activityDetailsLocationLabel].label, location)
+        XCTAssertEqual(app.staticTexts[Constants.activityDetailsCostLabel].label, cost)
+        XCTAssertEqual(app.staticTexts[Constants.activityDetailsDescriptionLabel].label, detail)
+        
+        return self
     }
 }
